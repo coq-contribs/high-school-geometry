@@ -1,14 +1,12 @@
 Name: HighSchoolGeometry
-Title: Géométrie pour le lycée (geometry for French high-school)
+Title: Geometry for French high-school
 Author: Frédérique Guilhot
 Email: Frederique.Guilhot@sophia.inria.fr
 Homepage: http://www-sop.inria.fr/lemme/Frederique.Guilhot/index.html
 Institution: INRIA Sophia-Antipolis
-Date: Janvier 2004 (January 2004)
-Description: Cette bibliothèque de géométrie est dédiée à l'enseignement au lycée. L'axiomatisation choisie n'utilise pas la méthode analytique.
-(This library is dedicated to high-shool geometry teaching. 
-The axiomatisation for affine euclidean space is in a non analytic setting.)
-Keywords: géométrie, enseignement, lycée (geometry, teaching, high-school)
-Require: Reals, Fourier, Field
-
+Date: January 2004
+Description: This library is dedicated to high-shool geometry teaching. 
+The axiomatisation for affine euclidean space is in a non analytic setting.
+Keywords: geometry, teaching, high-school
+Require: 
 Category: Mathematics/Geometry/General
