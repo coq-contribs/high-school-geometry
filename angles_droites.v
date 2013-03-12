@@ -247,8 +247,8 @@ apply distance_non_nulle.
 elim def_representant_unitaire2 with (A := D) (B := E) (C := x);
  [ intros; elim H7; intros H22 H23; rewrite H22; try discrR | auto | auto ].
 Qed.
-Variable AD : Type.
-Variable cons_AD : DR -> DR -> AD.
+Parameter AD : Type.
+Parameter cons_AD : DR -> DR -> AD.
  
 Axiom
   AV_vers_AD :

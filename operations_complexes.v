@@ -25,7 +25,7 @@ apply Rmult_eq_reg_l with x; auto.
 rewrite H0; auto with real.
 Qed.
 Hint Resolve Rinv_calcul: real.
-Variable Cplus : C -> C -> C.
+Parameter Cplus : C -> C -> C.
  
 Axiom
   Cplus_def :
@@ -89,7 +89,7 @@ rewrite
 replace (x1 + (x2 + x3)) with (x1 + x2 + x3); [ idtac | ring ].
 replace (y1 + (y2 + y3)) with (y1 + y2 + y3); [ auto | ring ].
 Qed.
-Variable Copp : C -> C.
+Parameter Copp : C -> C.
 
 Definition Cminus x y := Cplus x (Copp y). 
 
@@ -115,7 +115,7 @@ replace (y1 + - y1) with 0; [ auto | ring ].
 Qed.
 Hint Resolve Cplus_z_oppz Copp_algebrique Cplus_commutative Cplus_z_zeroC:
   geo.
-Variable Cmult : C -> C -> C.
+Parameter Cmult : C -> C -> C.
  
 Axiom
   Cmult_module : forall z z' : C, module (Cmult z z') = module z * module z'.
@@ -419,7 +419,7 @@ rewrite H2; discrR.
 rewrite <- Cmult_module; rewrite H1; rewrite <- module_oneC; auto.
 rewrite <- Cmult_module; rewrite H0; rewrite <- module_oneC; auto.
 Qed.
-Variable Cinv : C -> C.
+Parameter Cinv : C -> C.
  
 Axiom Cinv_def : forall z : C, z <> zeroC -> Cmult z (Cinv z) = oneC.
  
@@ -463,7 +463,7 @@ rewrite <- Cmult_argument; auto with geo.
 rewrite Cinv_def; auto with geo.
 Qed.
 Hint Resolve Cinv_argument: geo.
-Variable Cdiv : C -> C -> C.
+Parameter Cdiv : C -> C -> C.
  
 Axiom
   Cdiv_def : forall z z' : C, z' <> zeroC -> Cdiv z z' = Cmult z (Cinv z').

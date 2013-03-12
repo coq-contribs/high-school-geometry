@@ -17,8 +17,8 @@
 Require Export complexes.
 Set Implicit Arguments.
 Unset Strict Implicit.
-Variable partie_reelle : C -> R.
-Variable partie_imaginaire : C -> R.
+Parameter partie_reelle : C -> R.
+Parameter partie_imaginaire : C -> R.
  
 Axiom
   partie_reelle_def :
@@ -72,8 +72,8 @@ rewrite H0; rewrite H; rewrite (ordvec_ordonnee (O:=O) (I:=I) (J:=J) D);
  auto with geo.
 rewrite (absvec_abscisse (O:=O) (I:=I) (J:=J) D); auto with geo.
 Qed.
-Variable module : C -> R.
-Variable argument : C -> AV.
+Parameter module : C -> R.
+Parameter argument : C -> AV.
  
 Axiom
   module_def :
@@ -191,7 +191,7 @@ elim existence_argument with (z := z);
  [ intros a H1; try clear existence_argument; try exact H1 | auto ].
 exists r; exists a; auto.
 Qed.
-Variable cons_pol : R -> R -> C.
+Parameter cons_pol : R -> R -> C.
  
 Axiom
   forme_polaire_def :

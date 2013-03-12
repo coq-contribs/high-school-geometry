@@ -17,7 +17,7 @@
 Require Export puissance_cercle.
 Set Implicit Arguments.
 Unset Strict Implicit.
-Variable inversion : PO -> R -> PO -> PO.
+Parameter inversion : PO -> R -> PO -> PO.
  
 Axiom
   inversion_def :

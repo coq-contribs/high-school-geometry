@@ -17,7 +17,7 @@
 Require Export orthogonalite.
 Set Implicit Arguments.
 Unset Strict Implicit.
-Variable projete_orthogonal : PO -> PO -> PO -> PO.
+Parameter projete_orthogonal : PO -> PO -> PO -> PO.
  
 Axiom
   def_projete_orthogonal :

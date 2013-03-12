@@ -17,7 +17,7 @@
 Require Export parallelisme_concours.
 Set Implicit Arguments.
 Unset Strict Implicit.
-Variable scalaire : PP -> PP -> R.
+Parameter scalaire : PP -> PP -> R.
  
 Axiom scalaire_positif : forall A B : PO, scalaire (vec A B) (vec A B) >= 0.
  

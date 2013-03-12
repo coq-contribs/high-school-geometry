@@ -48,11 +48,11 @@ apply non_alignes_distincts2 with O; auto.
 apply orthogonal_non_alignes; auto with geo.
 Qed.
 Hint Resolve IJ_distincts: geo.
-Variable C : Type.
-Variable affixe : PO -> C.
-Variable image : C -> PO.
-Variable affixe_vec : PP -> C.
-Variable image_vec : C -> PP.
+Parameter C : Type.
+Parameter affixe : PO -> C.
+Parameter image : C -> PO.
+Parameter affixe_vec : PP -> C.
+Parameter image_vec : C -> PP.
  
 Axiom affixe_image : forall (z : C) (M : PO), M = image z -> z = affixe M.
  
@@ -105,7 +105,7 @@ elim existence_affixe_point with (M := M); intros z H;
  try clear existence_affixe_point; try exact H.
 exists z; eauto with geo.
 Qed.
-Variable cons_cart : R -> R -> C.
+Parameter cons_cart : R -> R -> C.
  
 Axiom
   cart_point_complexe :

@@ -17,7 +17,7 @@
 Require Export trigo.
 Set Implicit Arguments.
 Unset Strict Implicit.
-Variable aire : PP -> PP -> R.
+Parameter aire : PP -> PP -> R.
  
 Axiom
   def_aire_0 :

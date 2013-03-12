@@ -17,7 +17,7 @@
 Require Export homothetie_plane.
 Set Implicit Arguments.
 Unset Strict Implicit.
-Variable similitude : PO -> R -> R -> PO -> PO.
+Parameter similitude : PO -> R -> R -> PO -> PO.
  
 Axiom
   similitude_def :

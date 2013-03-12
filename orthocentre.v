@@ -170,7 +170,7 @@ apply (triangle_distincts_pied_hauteur (A:=A) (B:=C) (C:=B) (H:=K));
 apply triangle_hauteurs_secantes with (A := A); auto.
 apply aux with (A := A); auto.
 Qed.
-Variable orthocentre : PO -> PO -> PO -> PO.
+Parameter orthocentre : PO -> PO -> PO -> PO.
  
 Axiom
   orthocentre_def :

@@ -17,7 +17,7 @@
 Require Export Droite_plan_espace.
 Set Implicit Arguments.
 Unset Strict Implicit.
-Variable para_plan_plan : PL -> PL -> Prop.
+Parameter para_plan_plan : PL -> PL -> Prop.
  
 Axiom
   def_para_plan_plan :

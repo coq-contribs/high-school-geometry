@@ -223,7 +223,7 @@ VReplace (add_PP (vec A B) (mult_PP (-1) (mult_PP k (vec A B))))
 auto with geo.
 apply Rsqr_incrst_0; auto with real geo.
 Qed.
-Variable distance_droite : PO -> DR -> R.
+Parameter distance_droite : PO -> DR -> R.
  
 Axiom
   distance_droite_def :

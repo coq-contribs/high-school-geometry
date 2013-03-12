@@ -143,7 +143,7 @@ Simplscal.
 auto with geo.
 rewrite H4; auto.
 Qed.
-Variable representant_unitaire : PP -> PP.
+Parameter representant_unitaire : PP -> PP.
  
 Axiom
   def_representant_unitaire :

@@ -18,7 +18,7 @@ Require Export complexes_dilatations.
 Require Export reflexion_plane.
 Set Implicit Arguments.
 Unset Strict Implicit.
-Variable Conj : C -> C.
+Parameter Conj : C -> C.
  
 Axiom
   Conj_def :

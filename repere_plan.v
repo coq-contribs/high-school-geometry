@@ -72,8 +72,8 @@ exists (k0 + -1 * k); exists (k'0 + -1 * k').
 Ringvec.
 Ringvec.
 Qed.
-Variable abscisse : PO -> R.
-Variable ordonnee : PO -> R.
+Parameter abscisse : PO -> R.
+Parameter ordonnee : PO -> R.
  
 Axiom
   abscisse_def :
@@ -115,8 +115,8 @@ rewrite H4; auto.
 rewrite H5; auto.
 Ringvec.
 Qed.
-Variable absvec : PP -> R.
-Variable ordvec : PP -> R.
+Parameter absvec : PP -> R.
+Parameter ordvec : PP -> R.
  
 Axiom
   absvec_def :

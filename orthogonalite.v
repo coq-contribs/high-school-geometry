@@ -17,7 +17,7 @@
 Require Export produit_scalaire.
 Set Implicit Arguments.
 Unset Strict Implicit.
-Variable orthogonal : PP -> PP -> Prop.
+Parameter orthogonal : PP -> PP -> Prop.
  
 Axiom
   def_orthogonal :

@@ -18,7 +18,7 @@ Require Export determinant.
 Set Implicit Arguments.
 Unset Strict Implicit.
 Hint Resolve cart_def not_and_or or_not_and: geo.
-Variable vec_directeur : PP -> DR -> Prop.
+Parameter vec_directeur : PP -> DR -> Prop.
  
 Axiom
   vec_directeur_def :
@@ -299,7 +299,7 @@ RReplace a (a + - c / b + - (- c / b)).
 apply composantes_vecAB; eauto with geo.
 apply not_and_or; auto.
 Qed.
-Variable vec_normal : PP -> DR -> Prop.
+Parameter vec_normal : PP -> DR -> Prop.
  
 Axiom
   vec_normal_def :

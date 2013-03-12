@@ -71,7 +71,7 @@ rewrite Sin_opp; auto with geo.
 rewrite (def_Sin (A:=O) (B:=I) (C:=J) (D:=J)); auto with geo.
 rewrite H1; rewrite H2; rewrite H3; ring.
 Qed.
-Variable det : PP -> PP -> R.
+Parameter det : PP -> PP -> R.
  
 Axiom
   determinant_def :

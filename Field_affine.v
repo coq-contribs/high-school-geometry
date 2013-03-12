@@ -18,44 +18,44 @@ Require Export Rutile.
 Require Export Ring Field.
 Set Implicit Arguments.
 Unset Strict Implicit.
-Variable PO : Type.
-Variable PP : Type.
-Variable add_PP : PP -> PP -> PP.
-Variable mult_PP : R -> PP -> PP.
-Variable cons : R -> PO -> PP.
-Variable zero : PP.
+Parameter PO : Type.
+Parameter PP : Type.
+Parameter add_PP : PP -> PP -> PP.
+Parameter mult_PP : R -> PP -> PP.
+Parameter cons : R -> PO -> PP.
+Parameter zero : PP.
 (* AM anneau abstrait*)
-Variable AM : Type.
-Variables (plusAM multAM minusAM : AM -> AM -> AM).
-Variables (zeroAM : AM) (unAM : AM).
-Variable oppAM : AM -> AM.
+Parameter AM : Type.
+Parameters (plusAM multAM minusAM : AM -> AM -> AM).
+Parameters (zeroAM : AM) (unAM : AM).
+Parameter oppAM : AM -> AM.
  
 Axiom AM_theory :
     ring_theory zeroAM unAM plusAM multAM minusAM oppAM (eq(A:=AM)).
 (* Injections de R, PO et PP dans AM*)
-Variable fR : R -> AM.
-Variable fPO : PO -> AM.
-Variable fPP : PP -> AM.
+Parameter fR : R -> AM.
+Parameter fPO : PO -> AM.
+Parameter fPP : PP -> AM.
  
 Axiom fPP_inj : forall A B : PP, fPP A = fPP B -> A = B.
 (* Transports des opérations *)
-Hypothesis fRadd : forall x y : R, fR (x + y) = plusAM (fR x) (fR y).
-Hypothesis fRmult : forall x y : R, fR (x * y) = multAM (fR x) (fR y).
-Hypothesis fRopp : forall x : R, fR (- x) = oppAM (fR x).
-Hypothesis fR0 : fR 0 = zeroAM.
-Hypothesis fR1 : fR 1 = unAM.
+Axiom fRadd : forall x y : R, fR (x + y) = plusAM (fR x) (fR y).
+Axiom fRmult : forall x y : R, fR (x * y) = multAM (fR x) (fR y).
+Axiom fRopp : forall x : R, fR (- x) = oppAM (fR x).
+Axiom fR0 : fR 0 = zeroAM.
+Axiom fR1 : fR 1 = unAM.
 Hypothesis
   fcons : forall (x : R) (A : PO), fPP (cons x A) = multAM (fR x) (fPO A).
-Hypothesis
+Axiom
   fmult : forall (x : R) (A : PP), fPP (mult_PP x A) = multAM (fR x) (fPP A).
-Hypothesis fadd : forall A B : PP, fPP (add_PP A B) = plusAM (fPP A) (fPP B).
-Hypothesis fzeroPP : fPP zero = zeroAM.
+Axiom fadd : forall A B : PP, fPP (add_PP A B) = plusAM (fPP A) (fPP B).
+Axiom fzeroPP : fPP zero = zeroAM.
 (* Construction d'un corps *)
-Variable invAM : AM -> AM.
+Parameter invAM : AM -> AM.
 Definition divAM x y := multAM x (invAM y).
-Hypothesis fRinv : forall x : R, x <> 0 -> fR (/ x) = invAM (fR x).
-Hypothesis nonzeroAM : forall k : R, k <> 0 -> fR k <> zeroAM.
-Hypothesis invAM_l : forall x : AM, x <> zeroAM -> multAM (invAM x) x = unAM.
+Axiom fRinv : forall x : R, x <> 0 -> fR (/ x) = invAM (fR x).
+Axiom nonzeroAM : forall k : R, k <> 0 -> fR k <> zeroAM.
+Axiom invAM_l : forall x : AM, x <> zeroAM -> multAM (invAM x) x = unAM.
 
 Lemma AMField : field_theory
   zeroAM unAM plusAM multAM minusAM oppAM divAM invAM(eq(A:=AM)).

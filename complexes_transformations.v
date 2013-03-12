@@ -89,7 +89,7 @@ exists z0.
 rewrite (H0 z0).
 rewrite <- H1; auto.
 Qed.
-Variable transforme : (C -> C) -> PO -> PO.
+Parameter transforme : (C -> C) -> PO -> PO.
  
 Axiom
   transforme_def :

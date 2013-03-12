@@ -17,7 +17,7 @@
 Require Export Plans_paralleles.
 Set Implicit Arguments.
 Unset Strict Implicit.
-Variable secants : PL -> PL -> Prop.
+Parameter secants : PL -> PL -> Prop.
  
 Axiom
   def_secants :
@@ -239,8 +239,8 @@ rewrite H20; auto.
 apply plans_paralleles_droite with (4 := H2); auto.
 apply paralleles_droite_incluse; auto.
 Qed.
-Variable disjoints : PL -> PL -> Prop.
-Variable confondus : PL -> PL -> Prop.
+Parameter disjoints : PL -> PL -> Prop.
+Parameter confondus : PL -> PL -> Prop.
  
 Axiom
   def_disjoints :

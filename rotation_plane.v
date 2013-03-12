@@ -17,7 +17,7 @@
 Require Export metrique_triangle.
 Set Implicit Arguments.
 Unset Strict Implicit.
-Variable rotation : PO -> R -> PO -> PO.
+Parameter rotation : PO -> R -> PO -> PO.
  
 Axiom
   rotation_def :

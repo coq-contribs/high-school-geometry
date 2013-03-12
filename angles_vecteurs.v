@@ -17,10 +17,10 @@
 Require Export repere_ortho_plan.
 Set Implicit Arguments.
 Unset Strict Implicit.
-Variable AV : Type.
-Variable cons_AV : PP -> PP -> AV.
-Variable plus : AV -> AV -> AV.
-Variable opp : AV -> AV.
+Parameter AV : Type.
+Parameter cons_AV : PP -> PP -> AV.
+Parameter plus : AV -> AV -> AV.
+Parameter opp : AV -> AV.
  
 Axiom
   existence_AB_unitaire : exists A : PO, (exists B : PO, distance A B = 1).
@@ -56,9 +56,9 @@ Axiom
     forall A B C D : PO,
     A <> B ->
     C <> D -> opp (cons_AV (vec A B) (vec C D)) = cons_AV (vec C D) (vec A B).
-Variable AV0 : AV.
+Parameter AV0 : AV.
 (* Enroulement de R sur le cercle trigonométrique*)
-Variable image_angle : R -> AV.
+Parameter image_angle : R -> AV.
  
 Axiom AV0_zero : AV0 = image_angle 0.
  
@@ -83,7 +83,7 @@ Axiom
  
 Axiom mes_opp : forall x : R, image_angle (- x) = opp (image_angle x).
 (* Cas particuliers : angles plats et angles droits*)
-Variable pisurdeux : R.
+Parameter pisurdeux : R.
  
 Definition pi := pisurdeux + pisurdeux.
  

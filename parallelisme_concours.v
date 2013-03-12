@@ -17,8 +17,8 @@
 Require Export milieu.
 Set Implicit Arguments.
 Unset Strict Implicit.
-Variable DR : Type.
-Variable droite : PO -> PO -> DR.
+Parameter DR : Type.
+Parameter droite : PO -> PO -> DR.
  
 Axiom
   droite_permute : forall A B : PO, A <> B :>PO -> droite A B = droite B A.
@@ -37,7 +37,7 @@ rewrite droite_permute; auto.
 apply alignes_droite; auto with geo.
 Qed.
 Hint Resolve alignes_droite alignes_droite2: geo.
-Variable paralleles : DR -> DR -> Prop.
+Parameter paralleles : DR -> DR -> Prop.
  
 Axiom
   def_paralleles :
@@ -252,7 +252,7 @@ deroule_triangle A C B.
 red in |- *; intros; apply H8.
 rewrite H12; auto.
 Qed.
-Variable concours : DR -> DR -> Prop.
+Parameter concours : DR -> DR -> Prop.
  
 Axiom
   def_concours :
@@ -320,7 +320,7 @@ apply H1.
 apply paralleles_non_concours; auto.
 intuition.
 Qed.
-Variable pt_intersection : DR -> DR -> PO.
+Parameter pt_intersection : DR -> DR -> PO.
  
 Axiom
   def_pt_intersection :

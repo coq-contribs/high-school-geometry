@@ -22,10 +22,10 @@ Unset Strict Implicit.
 Definition repere_orthonormal_direct (O I J : PO) :=
   image_angle pisurdeux = cons_AV (vec O I) (vec O J) /\
   scalaire (vec O I) (vec O I) = 1 /\ scalaire (vec O J) (vec O J) = 1.
-Variable cos : R -> R.
-Variable sin : R -> R.
-Variable Cos : AV -> R.
-Variable Sin : AV -> R.
+Parameter cos : R -> R.
+Parameter sin : R -> R.
+Parameter Cos : AV -> R.
+Parameter Sin : AV -> R.
 (* cosinus et sinus d'un angle (ou d'un réel) sont obtenus par projections
    du point image du cercle trigonométrique sur les axes de coordonnées*)
  

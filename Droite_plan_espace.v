@@ -17,10 +17,10 @@
 Require Export Droite_espace.
 Set Implicit Arguments.
 Unset Strict Implicit.
-Variable PL : Type.
-Variable incluse : DR -> PL -> Prop.
-Variable plan : PO -> PO -> PO -> PL.
-Variable para_plan_dr : PL -> DR -> Prop.
+Parameter PL : Type.
+Parameter incluse : DR -> PL -> Prop.
+Parameter plan : PO -> PO -> PO -> PL.
+Parameter para_plan_dr : PL -> DR -> Prop.
  
 Axiom
   droite_incluse_plan :
@@ -163,7 +163,7 @@ apply paralleles_trans with D I; auto with geo.
 unfold not in |- *; intros; apply H2.
 rewrite <- H3; auto.
 Qed.
-Variable contact : DR -> PL -> Prop.
+Parameter contact : DR -> PL -> Prop.
  
 Axiom
   def_contact :

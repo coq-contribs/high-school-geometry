@@ -17,7 +17,7 @@
 Require Export barycentre.
 Set Implicit Arguments.
 Unset Strict Implicit.
-Variable mes_alg : PO -> PO -> R.
+Parameter mes_alg : PO -> PO -> R.
  
 Axiom
   def_mes_alg :

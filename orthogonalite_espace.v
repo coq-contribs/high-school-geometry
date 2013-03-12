@@ -18,7 +18,7 @@ Require Export orthogonalite.
 Require Export Plan_espace.
 Set Implicit Arguments.
 Unset Strict Implicit.
-Variable orthogonales : DR -> DR -> Prop.
+Parameter orthogonales : DR -> DR -> Prop.
  
 Axiom
   def_orthogonales :
@@ -33,7 +33,7 @@ Axiom
     A <> B ->
     C <> D ->
     orthogonales (droite A B) (droite C D) -> orthogonal (vec A B) (vec C D).
-Variable perpendiculaires : DR -> DR -> Prop.
+Parameter perpendiculaires : DR -> DR -> Prop.
  
 Axiom
   def_perpendiculaires :
@@ -96,7 +96,7 @@ Ringvec.
 Ringvec.
 apply non_alignes_distincts with B; auto.
 Qed.
-Variable orthogonaux : DR -> PL -> Prop.
+Parameter orthogonaux : DR -> PL -> Prop.
  
 Axiom
   def_orthogonaux :

@@ -17,7 +17,7 @@
 Require Export alignement.
 Set Implicit Arguments.
 Unset Strict Implicit.
-Variable barycentre : PP -> PP -> PO.
+Parameter barycentre : PP -> PP -> PO.
  
 Axiom
   add_PP_barycentre :
