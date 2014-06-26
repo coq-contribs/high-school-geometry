@@ -14,7 +14,7 @@
 (* 02110-1301 USA                                                     *)
 
 
-Require Export Classical_Type.
+Require Export Classical.
 Require Export Field_affine.
 Set Implicit Arguments.
 Unset Strict Implicit.
