@@ -139,7 +139,7 @@ intros I J A A' B B' C C' H H0 H1 H2; try assumption.
 discrimine A B.
 assert (A' = B'); auto with geo.
 rewrite H0; rewrite <- H3; auto.
-halignes H2 ipattern:k.
+halignes H2 ipattern:(k).
 apply colineaire_alignes with k.
 rewrite <-
  (translation_bipoint (I:=I) (J:=J) (A:=A) (A':=A') (B:=B) (B':=B'))
@@ -458,7 +458,7 @@ intros k I A B A' B' C C' H H0 H1 H2; try assumption.
 discrimine A B.
 assert (A' = B'); auto with geo.
 rewrite H0; rewrite <- H3; auto.
-halignes H2 ipattern:k0.
+halignes H2 ipattern:(k0).
 apply colineaire_alignes with k0.
 rewrite (homothetie_bipoint (k:=k) (I:=I) (A:=A) (B:=B) (A':=A') (B':=B'));
  auto.

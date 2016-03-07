@@ -458,7 +458,7 @@ replace (-1) with (-1 + 0) by ring.
 rewrite <- H12; ring.
 cut (~ alignes B A C); intros; auto with geo.
 red in |- *; intros; apply H10.
-halignes H11 ipattern:y.
+halignes H11 ipattern:(y).
 apply colineaire_alignes with ((1 + - k) * y).
 rewrite H12; unfold vec in |- *.
 RingPP2 H98.
@@ -477,7 +477,7 @@ rewrite H2.
 Fieldvec (1 + - k).
 cut (~ alignes A C B); intros; auto with geo.
 red in |- *; intros; apply H9.
-halignes H4 ipattern:x.
+halignes H4 ipattern:(x).
 apply colineaire_alignes with (/ k * x).
 apply mult_PP_regulier with k; auto.
 rewrite <- H2; rewrite H10; rewrite H11.

@@ -412,7 +412,7 @@ VReplace (cons (-1) I) (mult_PP (-1) (cons 1 I)).
 RingPP2 H11.
 Ringvec.
 unfold coplanaires in |- *.
-hPPalignes H9 ipattern:k.
+hPPalignes H9 ipattern:(k).
 right; try assumption.
 exists k; exists 0.
 rewrite H9; RingPP.

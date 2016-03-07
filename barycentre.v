@@ -441,11 +441,11 @@ assert (vec A1 A = vec B1 B).
 unfold vec in |- *.
 RingPP1 H2.
 RingPP.
-halignes H1 ipattern:k.
+halignes H1 ipattern:(k).
 assert (A1 = A); auto with geo.
 apply vecteur_nul_conf.
 rewrite H3; rewrite H1; Ringvec.
-halignes H0 ipattern:k0.
+halignes H0 ipattern:(k0).
 apply colineaire_alignes with (k0 + - k).
 VReplace (vec A B) (add_PP (vec A S) (mult_PP (-1) (vec B S))).
 rewrite H5; rewrite H4.

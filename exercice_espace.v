@@ -302,7 +302,7 @@ Lemma equilateral_non_alignes :
  scalaire (vec A B) (vec A B) = scalaire (vec B C) (vec B C) ->
  ~ alignes A B C.
 intros A B C H H0 H1; red in |- *; intros H2; try exact H2.
-halignes H2 ipattern:k.
+halignes H2 ipattern:(k).
 rewrite H3 in H0.
 cut (vec B C = mult_PP (k + -1) (vec A B)); intros.
 rewrite H4 in H1.

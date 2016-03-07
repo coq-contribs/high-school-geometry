@@ -335,7 +335,7 @@ assert (k <> 0); auto with real.
 assert (z <> zeroC).
 apply points_distincts_non_zeroC with (1 := H); auto with geo.
 assert (Conj z <> zeroC); auto with geo.
-symetrique O M ipattern:N.
+symetrique O M ipattern:(N).
 assert (M' = inversion O (- k) N).
 apply inversion_oppose_puissance with (3 := H3); auto.
 assert (- k > 0); auto with real.

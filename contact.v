@@ -84,7 +84,7 @@ replace (Rsqr (distance H C)) with (distance H C * distance H C);
 rewrite H10.
 rewrite sqrt_sqrt; auto with real.
 rewrite (distance_sym H O); ring.
-halignes H9 ipattern:k.
+halignes H9 ipattern:(k).
 apply ortho_sym.
 rewrite H12; pattern H at 1 in |- *; rewrite H6; auto with geo.
 auto with real.
@@ -100,8 +100,8 @@ elim
  | auto
  | auto ].
 exists C; split; auto.
-halignes H9 ipattern:k.
-halignes H4 ipattern:k'.
+halignes H9 ipattern:(k).
+halignes H4 ipattern:(k').
 apply colineaire_alignes with (k' + - (k * k')).
 VReplace (vec A C) (add_PP (vec A H) (vec H C)).
 rewrite H7.
@@ -115,8 +115,8 @@ replace (Rsqr (distance H C)) with (distance H C * distance H C);
 rewrite H10.
 rewrite sqrt_sqrt; auto with real.
 rewrite (distance_sym H O); ring.
-halignes H9 ipattern:k.
-halignes H4 ipattern:k'.
+halignes H9 ipattern:(k).
+halignes H4 ipattern:(k').
 apply ortho_sym.
 rewrite H11.
 VReplace (vec H A) (mult_PP (-1) (vec A H)).
@@ -145,8 +145,8 @@ rewrite <- H4; rewrite <- H2; (unfold Rsqr in |- *; ring).
 replace (Rsqr 0) with 0; [ idtac | unfold Rsqr in |- *; ring ].
 rewrite <- H9; rewrite H7; auto.
 unfold Rsqr in |- *; ring.
-halignes H3 ipattern:x.
-halignes H5 ipattern:y.
+halignes H3 ipattern:(x).
+halignes H5 ipattern:(y).
 apply ortho_sym.
 replace (vec H C) with (mult_PP (x + - y) (vec A B)); auto with geo.
 VReplace (vec H C) (add_PP (vec A C) (mult_PP (-1) (vec A H))).
@@ -196,7 +196,7 @@ assert (H <> A).
 assert (distance O H <> distance O A); auto with real.
 contrapose H7.
 rewrite <- H8; auto.
-halignes H5 ipattern:k.
+halignes H5 ipattern:(k).
 elim existence_symetrique with (A := H) (B := A); (intros C; intros).
 assert (H = milieu A C); auto with geo.
 assert (vec A C = mult_PP 2 (vec A H)); auto with geo.
@@ -268,13 +268,13 @@ elim H1;
 assert (O <> B).
 hcercle H5.
 apply (isometrie_distinct (A:=O) (B:=A) (A':=O) (B':=B)); auto with geo.
-soit_orthogonal B O ipattern:M.
+soit_orthogonal B O ipattern:(M).
 exists B; exists M.
 split;
  [ auto
  | split; [ split; [ try assumption | auto with geo ] | try assumption ] ].
 split; [ try assumption | idtac ].
-halignes H3 ipattern:k.
+halignes H3 ipattern:(k).
 apply ortho_sym.
 VReplace (vec B O') (add_PP (vec B O) (vec O O')).
 rewrite H7.
@@ -407,7 +407,7 @@ icercle.
 assert (O <> B).
 apply (isometrie_distinct (A:=O) (B:=A) (A':=O) (B':=B)); auto with geo.
 cut (alignes B O O'); [ intros H20 | auto with geo ].
-halignes H20 ipattern:k.
+halignes H20 ipattern:(k).
 absurd (B = O); auto.
 assert (vec O' B = mult_PP k (vec O B)).
 VReplace (vec O' B) (mult_PP (-1) (vec B O')).
@@ -597,13 +597,13 @@ apply (isometrie_distinct (A:=O) (B:=A) (A':=O) (B':=B)); auto with geo.
 assert (O <> C).
 apply (isometrie_distinct (A:=O) (B:=A) (A':=O) (B':=C)); auto with geo.
 assert (alignes B O O'); auto with geo.
-halignes H9 ipattern:x.
+halignes H9 ipattern:(x).
 absurd (B = O); auto.
 assert (vec O' B = mult_PP x (vec O B)).
 VReplace (vec O' B) (mult_PP (-1) (vec B O')).
 rewrite H10; Ringvec.
 assert (alignes C O O'); auto with geo.
-halignes H12 ipattern:k.
+halignes H12 ipattern:(k).
 absurd (C = O); auto.
 assert (vec O' C = mult_PP k (vec O C)).
 VReplace (vec O' C) (mult_PP (-1) (vec C O')).

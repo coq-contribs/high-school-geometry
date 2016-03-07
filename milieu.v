@@ -200,7 +200,7 @@ deroule_triangle A B C.
 red in |- *; intros; apply H3.
 assert (A' <> B').
 apply (deux_milieux_distincts (A:=B) (B:=C) (C:=A)); auto with geo.
-halignes H7 ipattern:k.
+halignes H7 ipattern:(k).
 apply colineaire_alignes with k; auto.
 rewrite <- (droite_milieu (A:=B) (B:=A) (C:=C) (I:=C') (J:=A'));
  auto with geo.
@@ -261,7 +261,7 @@ intros.
 deroule_triangle A B C.
 red in |- *; intros; apply H2.
 cut (A <> J); intros.
-halignes H6 ipattern:k.
+halignes H6 ipattern:(k).
 cut (k <> 0); intros.
 apply colineaire_alignes with ((1 + - k) * / k).
 replace (vec A C) with (mult_PP 2 (vec J I)).

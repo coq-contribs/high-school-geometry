@@ -117,13 +117,13 @@ Lemma paralleles_droite_plan_coplanaires_incluse :
  coplanaires A B C D -> coplanaires A B C E.
 intros A B C D E H20 H H0 H1.
 unfold coplanaires in |- *.
-hPPcoplanaires H1 ipattern:a1 ipattern:b1.
+hPPcoplanaires H1 ipattern:(a1) ipattern:(b1).
 elim def_para_plan_dr2 with (3 := H0); auto.
 intros F H2; elim H2; intros G H3; elim H3; intros H4 H5; elim H5;
  intros H6 H7; try clear H5 H3 H2; try exact H7.
 elim H4; [ intros H2 H3; try clear H4; try exact H3 ].
-hPPcoplanaires H2 ipattern:a ipattern:b.
-hPPcoplanaires H3 ipattern:a0 ipattern:b0.
+hPPcoplanaires H2 ipattern:(a) ipattern:(b).
+hPPcoplanaires H3 ipattern:(a0) ipattern:(b0).
 cut (paralleles (droite D E) (droite F G)); intros; auto with geo.
 elim def_paralleles2 with (3 := H4); auto; intros.
 right; try assumption.
@@ -218,8 +218,8 @@ elim def_para_plan_dr2 with (A := A) (B := B) (C := C) (F := D) (G := E);
  | auto ].
 elim H3; intros H2 H4; elim H4; intros H5 H6; try clear H4 H3; try exact H6.
 elim H2; [ intros H1 H3; try clear H2; try exact H3 ].
-hPPcoplanaires H1 ipattern:a0 ipattern:b0.
-hPPcoplanaires H3 ipattern:a1 ipattern:b1.
+hPPcoplanaires H1 ipattern:(a0) ipattern:(b0).
+hPPcoplanaires H3 ipattern:(a1) ipattern:(b1).
 generalize (def_paralleles2 (A:=D) (B:=E) (C:=F) (D:=G)); intros H9.
 elim H9;
  [ intros k H2; try clear H9; try exact H1

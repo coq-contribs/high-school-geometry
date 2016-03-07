@@ -63,8 +63,8 @@ rewrite H18; auto.
 Ringvec.
 Ringvec.
 generalize (triangle_rectangle_repere (O:=A) (I:=B) (J:=C)); intros.
-halignes H9 ipattern:k.
-halignes H13 ipattern:k0.
+halignes H9 ipattern:(k).
+halignes H13 ipattern:(k0).
 elim (classic (k = 0)); intros.
 cut (A = H); intros.
 generalize (translation_bipoint (I:=A) (J:=B) (A:=A) (A':=B) (B:=C) (B':=D));

@@ -340,7 +340,7 @@ Lemma projete_absolu_cos :
 intros.
 elim def_projete_orthogonal2 with (A := A) (B := B) (C := C) (H := H);
  [ intros; auto | auto | auto ].
-halignes H4 ipattern:k.
+halignes H4 ipattern:(k).
 cut (orthogonal (vec H A) (vec H C)); intros; auto with geo.
 elim Rtotal_order with (r1 := k) (r2 := 0);
  [ intros H8; try clear total_order
@@ -395,7 +395,7 @@ intros.
 deroule_triangle A B C.
 elim def_projete_orthogonal2 with (A := A) (B := B) (C := C) (H := H);
  [ intros; auto | auto | auto ].
-halignes H7 ipattern:k.
+halignes H7 ipattern:(k).
 cut (orthogonal (vec H A) (vec H C)); intros; auto with geo.
 elim Rtotal_order with (r1 := k) (r2 := 0);
  [ intros H11; try clear total_order
